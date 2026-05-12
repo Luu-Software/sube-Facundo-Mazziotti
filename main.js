@@ -10,27 +10,51 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 
 boton.addEventListener("click", () => {
   // COMPLETAR
-});
-let registrada = registrada.value
-let distancia = distancia.value
-let tarifa
+  let reg = registrada.value
+let dis = distancia.value
 
-if(registrada===si){
-if (distancia<=3)
+
+if(reg===si)
   {
-    tarifaregistrada="$715.24"
+if (dis<=3)
+  {
+    valor="$715.24"
 }
-else if (distancia<=6)
-  {
-    tarifaregistrada="$794.74"
+else if (dis<=6 && dis>3)
+{
+    valor="$794.74"
   }
-  else if (distancia<=12)
+  else if (dis<=12 && dis>6)
   {
-    tarifaregistrada="$855.97"
+   valor="$855.97"
   }
-  else if(distancia<=27)
+  else if(dis=>13)
   {
-    tarifaregistrada="$917.24"
+   valor="$917.24"
   }
 }
-tarifa.innerText = tarifaregistrada
+
+else {
+  if (dis<=3)
+    {
+    valor="$1137.23"
+  }
+  else if (dis<=6 && dis>3)
+  {
+     valor="$1263.64"
+    }
+    else if (dis<=12 && dis>6)
+    {
+    valor="$1360.99"
+    }
+    else if(dis=>13)
+    {
+      valor="1458.41"
+    }
+
+
+  }
+  valor = tarifa.innerText
+});
+
+  
