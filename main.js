@@ -12,9 +12,9 @@ boton.addEventListener("click", () => {
   // COMPLETAR
   let reg = registrada.value
 let dis = distancia.value
+let valor
 
-
-if(reg===si)
+if(reg==="si")
   {
 if (dis<=3)
   {
@@ -34,7 +34,7 @@ else if (dis<=6 && dis>3)
   }
 }
 
-else {
+else if(reg==="no"){
   if (dis<=3)
     {
     valor="$1137.23"
@@ -49,12 +49,35 @@ else {
     }
     else if(dis=>13)
     {
-      valor="1458.41"
+      valor="$1458.41"
     }
 
 
   }
-  valor = tarifa.innerText
-});
+  else if (reg==="social")
+  {
+    if (dis<=3)
+      {
+      valor="$339,18"
+    }
+    else if (dis<=6 && dis>3)
+    {
+       valor="$376,88"
+      }
+      else if (dis<=12 && dis>6)
+      {
+      valor="$405,91"
+      }
+      else if(dis=>13)
+      {
+        valor="$434,97"
+      }
+  }
+  
+ 
+
+  tarifa.innerText = valor;
+  }
+);
 
   
